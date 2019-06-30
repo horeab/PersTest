@@ -29,6 +29,11 @@ public class StartGame {
                     }
 
                     @Override
+                    public boolean isPortraitMode() {
+                        return false;
+                    }
+
+                    @Override
                     public String getLanguage() {
                         return "ro";
                     }
