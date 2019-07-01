@@ -13,10 +13,13 @@ import libgdx.controls.button.MyButton;
 import libgdx.controls.label.MyWrappedLabel;
 import libgdx.controls.label.MyWrappedLabelConfig;
 import libgdx.controls.label.MyWrappedLabelConfigBuilder;
+import libgdx.controls.popup.MyPopup;
 import libgdx.graphics.GraphicUtils;
 import libgdx.implementations.iq.SkelGameButtonSize;
+import libgdx.implementations.iq.SkelGameButtonSkin;
 import libgdx.implementations.iq.SkelGameLabel;
 import libgdx.implementations.iq.SkelGameRatingService;
+import libgdx.implementations.iq.SkelGameSpecificResource;
 import libgdx.resources.FontManager;
 import libgdx.resources.MainResource;
 import libgdx.resources.ResourcesManager;
@@ -52,9 +55,51 @@ public class MainMenuScreen extends AbstractScreen {
 
         });
         MyButton info = new ButtonBuilder("Info", btnFontScale).setButtonSkin(MainButtonSkin.DEFAULT).setFixedButtonSize(SkelGameButtonSize.HEADER_BUTTON).build();
+        final AbstractScreen screen = this;
         info.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
+                MyPopup popup = popup();
+                popup.addToPopupManager();
+            }
+
+            private MyPopup popup() {
+                return new MyPopup(screen) {
+                    @Override
+                    protected void addButtons() {
+                        MyButton okButton = new ButtonBuilder("OK", FontManager.getBigFontDim()).setButtonSkin(MainButtonSkin.DEFAULT)
+                                .setFixedButtonSize(SkelGameButtonSize.HEADER_BUTTON).build();
+                        okButton.addListener(new ClickListener() {
+                            @Override
+                            public void clicked(InputEvent event, float x, float y) {
+                                hide();
+                            }
+                        });
+                        addButton(okButton);
+                    }
+
+                    @Override
+                    protected String getLabelText() {
+                        return SkelGameLabel.infoTextPopup.getText();
+                    }
+
+                    @Override
+                    protected MyWrappedLabel getLabel() {
+                        MyWrappedLabel label = super.getLabel();
+                        label.getLabels().get(0).getStyle().font.getData().markupEnabled = true;
+                        return label;
+                    }
+
+                    @Override
+                    protected MyWrappedLabelConfigBuilder getInfoLabelConfigBuilder() {
+                        return super.getInfoLabelConfigBuilder().setFontScale(FontManager.getBigFontDim());
+                    }
+
+                    @Override
+                    public float getPrefWidth() {
+                        return ScreenDimensionsManager.getScreenWidthValue(80);
+                    }
+                };
             }
 
         });
@@ -68,11 +113,11 @@ public class MainMenuScreen extends AbstractScreen {
 
     private Table createQuestionTable() {
         Table table = new Table();
-        Image image1 = GraphicUtils.getImage(MainResource.skip);
-        Image image2 = GraphicUtils.getImage(MainResource.skip);
+        Image image1 = GraphicUtils.getImage(SkelGameSpecificResource.leftarrow);
+        Image image2 = GraphicUtils.getImage(SkelGameSpecificResource.rightarrow);
         SkelGameButtonSize navButton = SkelGameButtonSize.NAV_BUTTON;
         table.add(image1).width(ScreenDimensionsManager.getScreenWidthValue(8)).width(navButton.getWidth()).height(navButton.getHeight());
-        float questionsWidth = ScreenDimensionsManager.getScreenWidthValue(80);
+        float questionsWidth = ScreenDimensionsManager.getScreenWidthValue(75);
         table.add(new MyWrappedLabel(new MyWrappedLabelConfigBuilder().setWidth(questionsWidth).setFontScale(FontManager.calculateMultiplierStandardFontSize(4f))
                 .setText("I pay attention to details").build()))
                 .width(questionsWidth);
@@ -89,14 +134,14 @@ public class MainMenuScreen extends AbstractScreen {
         float horizontalGeneralMarginDimen = MainDimen.horizontal_general_margin.getDimen();
         btnSideDimen = btnSideDimen - horizontalGeneralMarginDimen * 2;
         Table infoTable = new Table();
-        infoTable.add(new MyWrappedLabel(getAnswerInfoLabel("Disagree"))).width(infoSideDimen);
-        infoTable.add(new MyWrappedLabel(getAnswerInfoLabel("Neutral"))).width(infoSideDimen);
-        infoTable.add(new MyWrappedLabel(getAnswerInfoLabel("Agree"))).width(infoSideDimen);
+        infoTable.add(new MyWrappedLabel(getAnswerInfoLabel(SkelGameLabel.disagree.getText()))).width(infoSideDimen);
+        infoTable.add(new MyWrappedLabel(getAnswerInfoLabel(SkelGameLabel.neutral.getText()))).width(infoSideDimen);
+        infoTable.add(new MyWrappedLabel(getAnswerInfoLabel(SkelGameLabel.agree.getText()))).width(infoSideDimen);
         table.add(infoTable).width(screenWidth).row();
         Table btnTable = new Table();
         for (int i = 0; i < totalButtons; i++) {
-            Image image = GraphicUtils.getImage(MainResource.skip);
-            btnTable.add(image).pad(horizontalGeneralMarginDimen).width(btnSideDimen).height(btnSideDimen);
+            MyButton btn = new ButtonBuilder("").setButtonSkin(SkelGameButtonSkin.valueOf("b" + i)).setFixedButtonSize(SkelGameButtonSize.NAV_BUTTON).build();
+            btnTable.add(btn).pad(horizontalGeneralMarginDimen).width(btnSideDimen).height(btnSideDimen);
         }
         table.add(btnTable);
         return table;

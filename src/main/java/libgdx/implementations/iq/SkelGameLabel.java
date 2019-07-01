@@ -5,8 +5,22 @@ import libgdx.resources.gamelabel.GameLabelUtils;
 import libgdx.resources.gamelabel.SpecificPropertiesUtils;
 
 public enum SkelGameLabel implements libgdx.resources.gamelabel.GameLabel {
-
-    ;
+    agree,
+    neutral,
+    disagree,
+    fact1label,
+    fact2label,
+    fact3label,
+    fact4label,
+    fact5label,
+    fact1descr,
+    fact2descr,
+    fact3descr,
+    fact4descr,
+    fact5descr,
+    infoText,
+    infoBtn,
+    infoTextPopup,;
 
     @Override
     public String getText(Object... params) {
