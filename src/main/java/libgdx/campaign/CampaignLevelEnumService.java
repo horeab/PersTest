@@ -1,7 +1,7 @@
 package libgdx.campaign;
 
-import libgdx.implementations.iq.SkelGame;
-import libgdx.implementations.iq.SkelGameButtonSkin;
+import libgdx.implementations.skel.SkelGame;
+import libgdx.implementations.skel.SkelGameButtonSkin;
 import libgdx.resources.Resource;
 import libgdx.resources.gamelabel.SpecificPropertiesUtils;
 import libgdx.utils.EnumUtils;

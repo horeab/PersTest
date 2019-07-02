@@ -13,7 +13,7 @@ import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import libgdx.constants.GameIdEnum;
 import libgdx.controls.popup.RatingService;
 import libgdx.game.Game;
-import libgdx.implementations.iq.IqGame;
+import libgdx.implementations.skel.IqGame;
 import libgdx.game.external.AppInfoService;
 import libgdx.preferences.PreferencesService;
 import libgdx.preferences.SettingsService;

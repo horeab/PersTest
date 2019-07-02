@@ -8,10 +8,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 
-import org.apache.commons.lang3.tuple.MutablePair;
-import org.apache.commons.lang3.tuple.Pair;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import libgdx.controls.button.ButtonBuilder;
@@ -23,11 +19,10 @@ import libgdx.controls.label.MyWrappedLabelConfigBuilder;
 import libgdx.controls.popup.MyPopup;
 import libgdx.game.Game;
 import libgdx.graphics.GraphicUtils;
-import libgdx.implementations.iq.SkelGameButtonSize;
-import libgdx.implementations.iq.SkelGameLabel;
-import libgdx.implementations.iq.SkelGameSpecificResource;
+import libgdx.implementations.skel.SkelGameButtonSize;
+import libgdx.implementations.skel.SkelGameLabel;
+import libgdx.implementations.skel.SkelGameSpecificResource;
 import libgdx.resources.FontManager;
-import libgdx.resources.MainResource;
 import libgdx.resources.dimen.MainDimen;
 import libgdx.screens.AbstractScreen;
 import libgdx.screens.SkelDimen;

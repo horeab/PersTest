@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-import libgdx.implementations.iq.SkelGame;
+import libgdx.implementations.skel.SkelGame;
 import libgdx.utils.EnumUtils;
 
 public class QuestionConfig {

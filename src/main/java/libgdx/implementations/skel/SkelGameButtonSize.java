@@ -1,4 +1,4 @@
-package libgdx.implementations.iq;
+package libgdx.implementations.skel;
 
 import libgdx.resources.dimen.MainDimen;
 

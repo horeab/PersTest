@@ -2,7 +2,7 @@ package libgdx.campaign;
 
 import java.util.List;
 
-import libgdx.implementations.iq.SkelGame;
+import libgdx.implementations.skel.SkelGame;
 import libgdx.utils.EnumUtils;
 
 public class CampaignService {
