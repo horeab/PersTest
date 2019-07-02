@@ -20,6 +20,7 @@ public enum SkelGameLabel implements libgdx.resources.gamelabel.GameLabel {
     fact5descr,
     infoText,
     infoBtn,
+    startagain,
     infoTextPopup,;
 
     @Override

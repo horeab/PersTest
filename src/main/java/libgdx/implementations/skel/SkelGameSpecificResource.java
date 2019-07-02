@@ -10,6 +10,7 @@ public enum SkelGameSpecificResource implements SpecificResource {
 
     // @formatter:off
 
+    questions("questions/questions", I18NBundle.class),
     specific_labels("labels/labels", I18NBundle.class),
     i1("background/i1.png", Texture.class),
     i2("background/i2.png", Texture.class),

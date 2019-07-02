@@ -34,7 +34,7 @@ import libgdx.utils.model.RGBColor;
 
 public class GameOverScreen extends AbstractScreen {
 
-    public static int MAX_VAL = 40;
+    private static int MAX_VAL = 40;
 
     private List<Question> questions;
     private QuestionService questionService;
@@ -75,18 +75,18 @@ public class GameOverScreen extends AbstractScreen {
 
     private Table createInfosTable() {
 
-//        int e = questionService.calculateE(questions);
-//        int a = questionService.calculateA(questions);
-//        int c = questionService.calculateC(questions);
-//        int n = questionService.calculateN(questions);
-//        int o = questionService.calculateO(questions);
+        int e = questionService.calculateE(questions);
+        int a = questionService.calculateA(questions);
+        int c = questionService.calculateC(questions);
+        int n = questionService.calculateN(questions);
+        int o = questionService.calculateO(questions);
 
         Table table = new Table();
-        addInfoTable(table, 20, 1);
-        addInfoTable(table, 20, 2);
-        addInfoTable(table, 20, 3);
-        addInfoTable(table, 20, 4);
-        addInfoTable(table, 20, 5);
+        addInfoTable(table, e, 1);
+        addInfoTable(table, a, 2);
+        addInfoTable(table, c, 3);
+        addInfoTable(table, n, 4);
+        addInfoTable(table, o, 5);
         Table infoIconTable = createInfoIconTable();
         table.add(infoIconTable).width(infoIconTable.getWidth()).padTop(MainDimen.vertical_general_margin.getDimen() * 2).height(infoIconTable.getHeight()).row();
         return table;
@@ -103,7 +103,7 @@ public class GameOverScreen extends AbstractScreen {
         float fullScoreTableWidth = percent / 100 * allWidth;
 
         Table infoTable = new Table();
-        MyButton btn = new ButtonBuilder(btnText, FontManager.getBigFontDim()).setButtonSkin(MainButtonSkin.DEFAULT).setFixedButtonSize(SkelGameButtonSize.INFO_BUTTON).build();
+        MyButton btn = new ButtonBuilder().setSingleLineText(btnText, FontManager.getBigFontDim()).setButtonSkin(MainButtonSkin.DEFAULT).setFixedButtonSize(SkelGameButtonSize.INFO_BUTTON).build();
         infoTable.add(btn).width(btn.getWidth()).height(btn.getHeight());
         final AbstractScreen screen = this;
         btn.addListener(new ClickListener() {

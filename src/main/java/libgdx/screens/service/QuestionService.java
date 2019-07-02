@@ -1,21 +1,46 @@
 package libgdx.screens.service;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+import libgdx.campaign.QuestionCategory;
+import libgdx.campaign.QuestionDifficulty;
+import libgdx.game.Game;
 import libgdx.screens.model.Question;
 
 public class QuestionService {
 
     public List<Question> getQuestions() {
-        int questionResourceId = 9999999;
-        String[] questions = null;
+        List<String> questions = allQuestions();
         List<Question> result = new ArrayList<Question>();
-        for (int i = 0; i < questions.length; i++) {
-            Question question = new Question(questions[i], i);
+        int i = 0;
+        for (String s : questions) {
+            Question question = new Question(s, i);
             result.add(question);
+            i++;
         }
         return result;
+    }
+
+    private List<String> allQuestions() {
+        List<String> set = new ArrayList<>();
+        Scanner scanner = new Scanner(Gdx.files.internal(getQuestionFilePath()).readString());
+        while (scanner.hasNextLine()) {
+            java.lang.String line = scanner.nextLine();
+            set.add(line);
+        }
+        scanner.close();
+        return set;
+    }
+
+    private String getQuestionFilePath() {
+        return Game.getInstance().getAppInfoService().getImplementationGameResourcesFolder() + "questions/questions.txt";
     }
 
     public int calculateE(List<Question> questions) {
