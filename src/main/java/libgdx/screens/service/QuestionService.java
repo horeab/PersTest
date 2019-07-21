@@ -40,7 +40,7 @@ public class QuestionService {
     }
 
     private String getQuestionFilePath() {
-        return Game.getInstance().getAppInfoService().getImplementationGameResourcesFolder() + "questions/questions.txt";
+        return Game.getInstance().getAppInfoService().getImplementationGameResourcesFolder() + "questions/" + Game.getInstance().getAppInfoService().getLanguage() + "_questions.txt";
     }
 
     public int calculateE(List<Question> questions) {

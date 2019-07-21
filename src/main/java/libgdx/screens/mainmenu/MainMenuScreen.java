@@ -1,6 +1,7 @@
 package libgdx.screens.mainmenu;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -169,7 +170,7 @@ public class MainMenuScreen extends AbstractScreen {
             }
 
         });
-        MyButton info = new ButtonBuilder().setSingleLineText("Info", btnFontScale).setButtonSkin(MainButtonSkin.DEFAULT).setFixedButtonSize(SkelGameButtonSize.HEADER_BUTTON).build();
+        MyButton info = new ButtonBuilder().setSingleLineText(SkelGameLabel.infoBtn.getText(), btnFontScale).setButtonSkin(MainButtonSkin.DEFAULT).setFixedButtonSize(SkelGameButtonSize.HEADER_BUTTON).build();
         final AbstractScreen screen = this;
         info.addListener(new ClickListener() {
             @Override
@@ -281,7 +282,7 @@ public class MainMenuScreen extends AbstractScreen {
     }
 
     private MyWrappedLabelConfig getAnswerInfoLabel(String text) {
-        return new MyWrappedLabelConfigBuilder().setTextStyle(ResourcesManager.getLabelGrey()).setFontScale(FontManager.calculateMultiplierStandardFontSize(2f)).setText(text).build();
+        return new MyWrappedLabelConfigBuilder().setTextColor(Color.GRAY).setFontScale(FontManager.calculateMultiplierStandardFontSize(2f)).setText(text).build();
     }
 
     @Override
