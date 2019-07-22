@@ -28,7 +28,7 @@ public class QuestionService {
         return result;
     }
 
-    private List<String> allQuestions() {
+    public List<String> allQuestions() {
         List<String> set = new ArrayList<>();
         Scanner scanner = new Scanner(Gdx.files.internal(getQuestionFilePath()).readString());
         while (scanner.hasNextLine()) {

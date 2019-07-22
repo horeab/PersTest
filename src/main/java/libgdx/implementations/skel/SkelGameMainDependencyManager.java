@@ -1,5 +1,10 @@
 package libgdx.implementations.skel;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import libgdx.constants.GameIdEnum;
 import libgdx.controls.labelimage.InventoryTableBuilderCreator;
 import libgdx.controls.popup.RatingService;
@@ -8,7 +13,9 @@ import libgdx.game.ScreenManager;
 import libgdx.resources.Resource;
 import libgdx.resources.ResourceService;
 import libgdx.screens.AbstractScreen;
+import libgdx.screens.service.QuestionService;
 import libgdx.transactions.TransactionsService;
+import libgdx.utils.Utils;
 
 public class SkelGameMainDependencyManager extends MainDependencyManager<ScreenManager, AbstractScreen, SkelGameLabel, Resource, GameIdEnum> {
 
@@ -30,6 +37,12 @@ public class SkelGameMainDependencyManager extends MainDependencyManager<ScreenM
     @Override
     public ResourceService createResourceService() {
         return new SkelGameResourceService();
+    }
+
+    @Override
+    public String getExtraFontChars() {
+        List<String> allQuestions = new QuestionService().allQuestions();
+        return Utils.getStringLetters(allQuestions);
     }
 
     @Override

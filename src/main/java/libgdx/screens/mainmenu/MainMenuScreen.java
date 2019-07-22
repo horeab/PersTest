@@ -33,6 +33,7 @@ import libgdx.screens.model.Question;
 import libgdx.screens.service.QuestionService;
 import libgdx.screens.service.StateManager;
 import libgdx.utils.ScreenDimensionsManager;
+import libgdx.utils.Utils;
 
 public class MainMenuScreen extends AbstractScreen {
 
@@ -175,8 +176,12 @@ public class MainMenuScreen extends AbstractScreen {
         info.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                MyPopup popup = popup();
-                popup.addToPopupManager();
+                if (Game.getInstance().getAppInfoService().screenShotMode()) {
+                    Utils.createChangeLangPopup();
+                } else {
+                    MyPopup popup = popup();
+                    popup.addToPopupManager();
+                }
             }
 
             private MyPopup popup() {
@@ -222,7 +227,7 @@ public class MainMenuScreen extends AbstractScreen {
         float dimen = MainDimen.horizontal_general_margin.getDimen();
         table.add(new MyWrappedLabel(new MyWrappedLabelConfigBuilder().setText(((currentGame.getCurrentQuestionIndex() + 1) + "/" + currentGame.getQuestions().size())).setFontScale(FontManager.calculateMultiplierStandardFontSize(2.7f)).setSingleLineLabel().build())).pad(dimen);
         table.add().growX();
-        table.add(newGame).width(newGame.getWidth()).height(newGame.getHeight());
+        table.add(newGame).width(newGame.getWidth() * 1.7f).height(newGame.getHeight());
         table.add(info).pad(dimen).width(info.getWidth()).height(info.getHeight());
         return table;
     }

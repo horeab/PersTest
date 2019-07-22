@@ -29,13 +29,18 @@ public class StartGame {
                     }
 
                     @Override
+                    public boolean screenShotMode() {
+                        return true;
+                    }
+
+                    @Override
                     public boolean isPortraitMode() {
                         return false;
                     }
 
                     @Override
                     public String getLanguage() {
-                        return "en";
+                        return "ro";
                     }
                 });
         libgdx.utils.startgame.StartGame.main(game, args);
