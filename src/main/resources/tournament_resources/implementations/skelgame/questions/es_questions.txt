@@ -1,5 +1,5 @@
-Soy la vida de la fiesta
-Siento poca preocupación por los demás.
+Soy popular en eventos sociales
+No me importan los demas
 Siempre estoy preparado
 Me estreso fácilmente
 Tengo un rico vocabulario
@@ -14,9 +14,9 @@ Presto atención a los detalles
 Me preocupo por las cosas
 Tengo una imaginación viva
 Me mantengo en el fondo
-Simpatizo con los sentimientos de los demas.
+Soy sentimental
 Hago un lío de cosas
-Rara vez me siento azul
+No me siento triste a menudo
 No me interesan las ideas abstractas.
 Empiezo conversaciones
 No me interesan los problemas ajenos.
@@ -35,7 +35,7 @@ Cambio mucho mi estado de animo
 Soy rápido para entender las cosas
 No me gusta llamar la atención
 Me tomo tiempo para otros
-Elude mis deberes
+Evito mis responsabilidades
 Tengo cambios de humor frecuentes
 Uso palabras difíciles
 No me importa ser el centro de atención.
@@ -46,5 +46,5 @@ Me paso el tiempo reflexionando sobre las cosas.
 Estoy tranquilo alrededor de extraños
 Hago que la gente se sienta a gusto
 Estoy exigiendo en mi trabajo
-A menudo me siento azul
+A menudo me siento triste
 Estoy lleno de ideas

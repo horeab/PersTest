@@ -1,5 +1,5 @@
-Eu sou a vida do partido
-Eu sinto pouca preocupação pelos outros
+Sou popular em eventos sociais
+Eu não me importo com os outros
 Estou sempre preparado
 Eu fico estressado facilmente
 Eu tenho um vocabulário rico
@@ -14,9 +14,9 @@ Eu presto atenção aos detalhes
 Eu me preocupo com as coisas
 Eu tenho uma imaginação vívida
 Eu continuo em segundo plano
-Eu simpatizo com os sentimentos dos outros
+Eu sou sentimental
 Eu faço uma bagunça de coisas
-Eu raramente me sinto triste
+Não me sinto triste com frequência
 Eu não estou interessado em idéias abstratas
 Eu começo conversas
 Eu não estou interessado em problemas de outras pessoas
@@ -35,7 +35,7 @@ Eu mudo muito meu humor
 Eu sou rápido em entender as coisas
 Eu não gosto de chamar atenção para mim mesmo
 Eu tiro um tempo para os outros
-Eu me esquivo dos meus deveres
+Eu evito minhas responsabilidades
 Tenho humor freqüente
 Eu uso palavras difíceis
 Eu não me importo de ser o centro das atenções

@@ -1,5 +1,5 @@
-Ja sam život stranke
-Osjećam malo brige za druge
+Popularan sam na društvenim događajima
+Nije me briga za druge
 Uvijek sam spreman
 Lako sam pod stresom
 Imam bogat rječnik
@@ -14,9 +14,9 @@ Obraćam pozornost na detalje
 Brinem o stvarima
 Imam živopisnu maštu
 Držim se u pozadini
-Suosjećam s osjećajima drugih
+Ja sam sentimentalan
 Stvaram nered
-Rijetko se osjećam plavo
+Često se ne osjećam tužno
 Ne zanimaju me apstraktne ideje
 Počinjem razgovore
 Ne zanimaju me tuđi problemi
@@ -35,7 +35,7 @@ Mnogo mijenjam raspoloženje
 Brzo razumijem stvari
 Ne volim privlačiti pozornost na sebe
 Odvojim vrijeme za druge
-Izbjegavam svoje dužnosti
+Izbjegavam svoje odgovornosti
 Imam česte promjene raspoloženja
 Koristim teške riječi
 Ne smeta mi biti u središtu pozornosti
@@ -46,5 +46,5 @@ Provodim vrijeme razmišljajući o stvarima
 Ja sam tiha oko stranaca
 Osjećam se ugodno
 Vrlo sam zahtjevan u svom radu
-Često osjećam plavu boju
+Često se osjećam tužno
 Pun sam ideja

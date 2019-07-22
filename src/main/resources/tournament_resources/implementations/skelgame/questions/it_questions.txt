@@ -1,5 +1,5 @@
-Sono la vita della festa
-Sento poca preoccupazione per gli altri
+Sono popolare negli eventi sociali
+Non mi importa degli altri
 Sono sempre preparato
 Mi sento stressato facilmente
 Ho un ricco vocabolario
@@ -14,9 +14,9 @@ Presto attenzione ai dettagli
 Mi preoccupo per le cose
 Ho una vivida immaginazione
 Continuo sullo sfondo
-Sono solidale con i sentimenti degli altri
+Sono sentimentale
 Faccio un casino di cose
-Raramente mi sento blu
+Non mi sento spesso triste
 Non mi interessano le idee astratte
 Inizio conversazioni
 Non sono interessato ai problemi degli altri
@@ -35,7 +35,7 @@ Cambio molto il mio umore
 Sono pronto a capire le cose
 Non mi piace attirare l'attenzione su di me
 Prendo tempo per gli altri
-Mi sottraggo ai miei doveri
+Evito le mie responsabilità
 Ho frequenti sbalzi d'umore
 Io uso parole difficili
 Non mi interessa essere al centro dell'attenzione
@@ -46,5 +46,5 @@ Trascorro del tempo riflettendo sulle cose
 Sono tranquillo con gli estranei
 Faccio sentire le persone a proprio agio
 Sono esigente nel mio lavoro
-Mi sento spesso blu
+Spesso mi sento triste
 Sono pieno di idee

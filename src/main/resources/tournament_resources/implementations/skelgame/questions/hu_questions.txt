@@ -1,5 +1,5 @@
-Én vagyok a párt élete
-Kicsit aggódom másokkal
+Én népszerű a társadalmi eseményeken
+Nem érdekel mások
 Mindig kész vagyok
 Könnyen megkönnyebbültem
 Gazdag szókincsem van
@@ -14,9 +14,9 @@ Figyelek a részletekre
 Aggódom a dolgok miatt
 Élénk képzeletem van
 Tartom a háttérben
-Együttérzöm mások érzéseivel
+Szentimentális vagyok
 A dolgokat kápráztatom
-Ritkán kéknek érzem magam
+Gyakran nem vagyok szomorú
 Nem érdekel az absztrakt ötletek
 Kezdek beszélgetéseket
 Nem érdekel a más emberek problémái
@@ -35,7 +35,7 @@ Nagyon megváltoztatom a hangulatot
 Gyorsan megértem a dolgokat
 Nem szeretem felhívni a figyelmet magamra
 Időt veszek másoknak
-Kihagyom a feladataimat
+Elkerülem a felelősségemet
 Gyakori hangulatváltozásom van
 Nehéz szavakat használok
 Nem bánom, hogy a figyelem középpontja
@@ -46,5 +46,5 @@ Időt gondolok a dolgokra
 Csendes vagyok idegenek körül
 Nyugodtan érzem magam az embereknek
 Kényelmes vagyok a munkámban
-Gyakran kéknek érzem magam
+Gyakran szomorú vagyok
 Tele vagyok ötletekkel

@@ -1,5 +1,5 @@
-Olen puolueen elämä
-Minusta tuntuu vähän huolta muista
+Olen suosittu sosiaalisissa tapahtumissa
+En välitä muista
 Olen aina valmis
 Saan stressaantuneena helposti
 Minulla on rikas sanasto
@@ -14,9 +14,9 @@ Kiinnitän huomiota yksityiskohtiin
 Olen huolissani asioista
 Minulla on elävä mielikuvitus
 Pidän taustalla
-Olen myötätuntoinen muiden tunteiden kanssa
+Olen tunteellinen
 Teen sotkuista asioita
-Olen harvoin sininen
+En tunne surullista usein
 En ole kiinnostunut abstrakteista ideoista
 Aloitan keskustelut
 En ole kiinnostunut muiden ihmisten ongelmista
@@ -35,7 +35,7 @@ Muutan mielialaani paljon
 Ymmärrän nopeasti asioita
 En halua kiinnittää huomiota itseeni
 Otan aikaa ulos muille
-Pelastan tehtäviäni
+Vältän vastuuni
 Minulla on usein mielialan vaihteluja
 Käytän vaikeita sanoja
 En ole mielestäni huomion keskipiste
@@ -46,5 +46,5 @@ Vietän aikaa miettimään asioita
 Olen hiljaa vieraiden ympärillä
 Teen ihmiset tuntemaan olonsa helpoksi
 Olen vaativa työssäni
-Tunnen usein sinisen
+Olen usein surullinen
 Olen täynnä ideoita

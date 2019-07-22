@@ -1,5 +1,5 @@
-Jeg er partiets liv
-Jeg føler lite bekymring for andre
+Jeg er populær på sosiale arrangementer
+Jeg bryr meg ikke om andre
 Jeg er alltid forberedt
 Jeg blir stresset ut enkelt
 Jeg har et rikt ordforråd
@@ -14,9 +14,9 @@ Jeg tar hensyn til detaljer
 Jeg er bekymret for ting
 Jeg har en levende fantasi
 Jeg holder i bakgrunnen
-Jeg sympatiserer med andres følelser
+Jeg er sentimental
 Jeg gjør et rot av ting
-Jeg føler sjelden blå
+Jeg føler meg ikke trist ofte
 Jeg er ikke interessert i abstrakte ideer
 Jeg starter samtaler
 Jeg er ikke interessert i andres problemer
@@ -35,7 +35,7 @@ Jeg forandrer meg veldig mye
 Jeg er rask til å forstå ting
 Jeg liker ikke å trekke oppmerksomhet mot meg selv
 Jeg tar tid for andre
-Jeg shirk mine plikter
+Jeg unngår mitt ansvar
 Jeg har hyppige humørsvingninger
 Jeg bruker vanskelige ord
 Jeg har ikke noe imot å være sentrum av oppmerksomheten
@@ -46,5 +46,5 @@ Jeg bruker tid på å reflektere over ting
 Jeg er stille rundt fremmede
 Jeg får folk til å føle seg trygge
 Jeg er krevende i arbeidet mitt
-Jeg føler meg ofte blå
+Jeg føler meg ofte trist
 Jeg er full av ideer

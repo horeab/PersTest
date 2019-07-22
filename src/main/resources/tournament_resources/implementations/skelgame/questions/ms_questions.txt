@@ -1,5 +1,5 @@
-Saya adalah pesta parti
-Saya rasa sedikit kebimbangan terhadap orang lain
+Saya popular di acara sosial
+Saya tidak peduli dengan orang lain
 Saya sentiasa bersedia
 Saya mendapat tekanan dengan mudah
 Saya mempunyai perbendaharaan kata yang kaya
@@ -14,9 +14,9 @@ Saya memberi perhatian kepada butiran
 Saya bimbang tentang perkara
 Saya mempunyai imaginasi yang jelas
 Saya terus berada di latar belakang
-Saya bersimpati dengan perasaan orang lain
+Saya sentimental
 Saya membuat masalah
-Saya jarang berasa biru
+Saya tidak berasa sedih sering
 Saya tidak berminat dengan idea-idea abstrak
 Saya mula perbualan
 Saya tidak berminat dengan masalah orang lain
@@ -35,7 +35,7 @@ Saya mengubah mood saya banyak
 Saya cepat memahami perkara
 Saya tidak suka menarik perhatian saya
 Saya mengambil masa untuk orang lain
-Saya menghalalkan tugas saya
+Saya mengelakkan tanggungjawab saya
 Saya mempunyai perubahan mood yang kerap
 Saya menggunakan kata-kata yang sukar
 Saya tidak keberatan menjadi pusat perhatian
@@ -46,5 +46,5 @@ Saya menghabiskan masa mencerminkan perkara
 Saya diam di sekeliling orang yang tidak dikenali
 Saya membuat orang berasa selesa
 Saya menuntut dalam kerja saya
-Saya sering berasa biru
+Saya sering berasa sedih
 Saya penuh dengan idea

@@ -1,5 +1,5 @@
-Tôi là cuộc sống của bữa tiệc
-Tôi cảm thấy ít quan tâm đến người khác
+Tôi nổi tiếng tại các sự kiện xã hội
+Tôi không quan tâm đến người khác
 Tôi luôn chuẩn bị
 Tôi dễ bị căng thẳng
 Tôi có vốn từ vựng phong phú
@@ -14,9 +14,9 @@ Tôi chú ý đến chi tiết
 Tôi lo lắng về những điều
 Tôi có một trí tưởng tượng sống động
 Tôi giữ trong nền
-Tôi đồng cảm với cảm xúc của người khác
+Tôi là người đa cảm
 Tôi làm cho mọi thứ lộn xộn
-Tôi hiếm khi cảm thấy màu xanh
+Tôi không cảm thấy buồn thường xuyên
 Tôi không quan tâm đến những ý tưởng trừu tượng
 Tôi bắt đầu cuộc trò chuyện
 Tôi không quan tâm đến vấn đề của người khác
@@ -35,7 +35,7 @@ Tôi thay đổi tâm trạng rất nhiều
 Tôi nhanh chóng hiểu điều
 Tôi không muốn thu hút sự chú ý đến bản thân
 Tôi dành thời gian cho người khác
-Tôi trốn tránh nhiệm vụ của mình
+Tôi tránh trách nhiệm của mình
 Tôi thường xuyên thay đổi tâm trạng
 Tôi dùng từ khó
 Tôi không ngại trở thành trung tâm của sự chú ý

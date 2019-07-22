@@ -1,5 +1,5 @@
-Akulah kehidupan pesta
-Saya merasa sedikit prihatin terhadap orang lain
+Saya populer di acara sosial
+Saya tidak peduli dengan orang lain
 Saya selalu siap
 Saya mudah stres
 Saya memiliki kosakata yang kaya
@@ -14,9 +14,9 @@ Saya memperhatikan detail
 Saya khawatir tentang banyak hal
 Saya memiliki imajinasi yang jelas
 Saya tetap di latar belakang
-Saya bersimpati dengan perasaan orang lain
+Saya sentimental
 Saya mengacaukan banyak hal
-Saya jarang merasa biru
+Saya tidak sering merasa sedih
 Saya tidak tertarik dengan ide-ide abstrak
 Saya memulai percakapan
 Saya tidak tertarik dengan masalah orang lain
@@ -35,7 +35,7 @@ Saya banyak mengubah suasana hati saya
 Saya cepat memahami banyak hal
 Saya tidak suka menarik perhatian pada diri saya sendiri
 Saya meluangkan waktu untuk orang lain
-Saya mengabaikan tugas saya
+Saya menghindari tanggung jawab saya
 Saya sering mengalami perubahan suasana hati
 Saya menggunakan kata-kata yang sulit
 Saya tidak keberatan menjadi pusat perhatian
@@ -46,5 +46,5 @@ Saya menghabiskan waktu untuk memikirkan berbagai hal
 Saya diam di sekitar orang asing
 Saya membuat orang merasa nyaman
 Saya menuntut pekerjaan saya
-Saya sering merasa biru
+Saya sering merasa sedih
 Saya penuh dengan ide
