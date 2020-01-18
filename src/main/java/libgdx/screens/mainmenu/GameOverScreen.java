@@ -24,12 +24,14 @@ import libgdx.implementations.skel.SkelGameLabel;
 import libgdx.implementations.skel.SkelGameSpecificResource;
 import libgdx.resources.FontManager;
 import libgdx.resources.dimen.MainDimen;
+import libgdx.resources.gamelabel.MainGameLabel;
 import libgdx.screens.AbstractScreen;
 import libgdx.screens.SkelDimen;
 import libgdx.screens.model.Question;
 import libgdx.screens.service.QuestionService;
 import libgdx.utils.ActorPositionManager;
 import libgdx.utils.ScreenDimensionsManager;
+import libgdx.utils.Utils;
 import libgdx.utils.model.RGBColor;
 
 public class GameOverScreen extends AbstractScreen {
@@ -59,6 +61,10 @@ public class GameOverScreen extends AbstractScreen {
         table.add(infosTable).width(infosTable.getWidth()).height(infosTable.getHeight()).row();
         ActorPositionManager.setActorCenterHorizontalOnScreen(infosTable);
         addActor(table);
+    }
+
+    public static void displayInAppPurchasesPopup(Runnable redirectAfterBoughtScreen) {
+        Game.getInstance().getInAppPurchaseManager().displayInAppPurchasesPopup(MainGameLabel.l_extracontent.getText(), redirectAfterBoughtScreen);
     }
 
     private Table createInfoIconTable() {
@@ -109,8 +115,18 @@ public class GameOverScreen extends AbstractScreen {
         btn.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                MyPopup popup = popup();
-                popup.addToPopupManager();
+
+                final MyPopup popup = popup();
+                if (Utils.isValidExtraContent()) {
+                    popup.addToPopupManager();
+                } else {
+                    displayInAppPurchasesPopup(new Runnable() {
+                        @Override
+                        public void run() {
+                            popup.addToPopupManager();
+                        }
+                    });
+                }
             }
 
             private MyPopup popup() {

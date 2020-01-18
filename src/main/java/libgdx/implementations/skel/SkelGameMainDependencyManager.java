@@ -40,12 +40,6 @@ public class SkelGameMainDependencyManager extends MainDependencyManager<ScreenM
     }
 
     @Override
-    public String getExtraFontChars() {
-        List<String> allQuestions = new QuestionService().allQuestions();
-        return Utils.getStringLetters(allQuestions);
-    }
-
-    @Override
     public RatingService createRatingService(AbstractScreen abstractScreen) {
         return new SkelGameRatingService(abstractScreen);
     }

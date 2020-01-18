@@ -10,6 +10,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 import org.omg.CORBA.INITIALIZE;
 
+import libgdx.controls.animations.ActorAnimation;
 import libgdx.controls.button.ButtonBuilder;
 import libgdx.controls.button.MainButtonSkin;
 import libgdx.controls.button.MyButton;
@@ -17,6 +18,8 @@ import libgdx.controls.label.MyWrappedLabel;
 import libgdx.controls.label.MyWrappedLabelConfig;
 import libgdx.controls.label.MyWrappedLabelConfigBuilder;
 import libgdx.controls.popup.MyPopup;
+import libgdx.controls.popup.ProVersionPopup;
+import libgdx.dbapi.GameStatsDbApiService;
 import libgdx.game.Game;
 import libgdx.graphics.GraphicUtils;
 import libgdx.implementations.skel.SkelGameButtonSize;
@@ -25,6 +28,7 @@ import libgdx.implementations.skel.SkelGameLabel;
 import libgdx.implementations.skel.SkelGameRatingService;
 import libgdx.implementations.skel.SkelGameSpecificResource;
 import libgdx.resources.FontManager;
+import libgdx.resources.MainResource;
 import libgdx.resources.ResourcesManager;
 import libgdx.resources.dimen.MainDimen;
 import libgdx.screens.AbstractScreen;
@@ -32,8 +36,10 @@ import libgdx.screens.model.CurrentGame;
 import libgdx.screens.model.Question;
 import libgdx.screens.service.QuestionService;
 import libgdx.screens.service.StateManager;
+import libgdx.utils.DateUtils;
 import libgdx.utils.ScreenDimensionsManager;
 import libgdx.utils.Utils;
+import libgdx.utils.model.FontColor;
 
 public class MainMenuScreen extends AbstractScreen {
 
@@ -52,6 +58,9 @@ public class MainMenuScreen extends AbstractScreen {
     }
 
     private void createScreen(Question question) {
+        if (Game.getInstance().getCurrentUser() != null) {
+            new GameStatsDbApiService().incrementGameStatsQuestionsWon(Game.getInstance().getCurrentUser().getId(), Long.valueOf(DateUtils.getNowMillis()).toString());
+        }
         Table allTable = new Table();
         allTable.setName(MAIN_TABLE_NAME);
         allTable.setFillParent(true);
@@ -97,16 +106,24 @@ public class MainMenuScreen extends AbstractScreen {
         refreshLevel();
     }
 
-    private void goToLevel(int qNr) {
+    private void goToLevel(final int qNr) {
         currentGame.setCurrentQuestion(qNr);
-        if (qNr == 30 || qNr == 46 || qNr == 13) {
-            Game.getInstance().getAppInfoService().showPopupAd();
+        if (qNr == 13 && !Utils.isValidExtraContent()) {
+            new ProVersionPopup(Game.getInstance().getAbstractScreen()).addToPopupManager();
+        } else if (qNr == 30 || qNr == 46) {
+            Game.getInstance().getAppInfoService().showPopupAd(new Runnable() {
+                @Override
+                public void run() {
+                }
+            });
         }
+
         if (isGameOver(qNr)) {
             goToGameOver();
         } else {
             refreshLevel();
         }
+
     }
 
     private void refreshLevel() {
@@ -162,6 +179,28 @@ public class MainMenuScreen extends AbstractScreen {
 
     private Table createHeaderTable() {
         Table table = new Table();
+        float dimen = MainDimen.horizontal_general_margin.getDimen();
+        if (!Utils.isValidExtraContent()) {
+            final Image mug = GraphicUtils.getImage(MainResource.mug);
+            float mugDimen = dimen * 4;
+            mug.setWidth(mugDimen);
+            mug.setHeight(mugDimen);
+            new ActorAnimation(mug, Game.getInstance().getAbstractScreen()).animateZoomInZoomOut();
+            table.add(mug).padLeft(dimen).padBottom(dimen).width(mugDimen).height(mugDimen);
+            mug.addListener(new ClickListener() {
+                @Override
+                public void clicked(InputEvent event, float x, float y) {
+                    GameOverScreen.displayInAppPurchasesPopup(new Runnable() {
+                        @Override
+                        public void run() {
+                            refreshLevel();
+                        }
+                    });
+                }
+            });
+        }
+
+
         float btnFontScale = FontManager.calculateMultiplierStandardFontSize(1.6f);
         MyButton newGame = new ButtonBuilder().setSingleLineText(SkelGameLabel.startagain.getText(), btnFontScale).setButtonSkin(MainButtonSkin.DEFAULT).setFixedButtonSize(SkelGameButtonSize.HEADER_BUTTON).build();
         newGame.addListener(new ClickListener() {
@@ -176,12 +215,8 @@ public class MainMenuScreen extends AbstractScreen {
         info.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                if (Game.getInstance().getAppInfoService().screenShotMode()) {
-                    Utils.createChangeLangPopup();
-                } else {
-                    MyPopup popup = popup();
-                    popup.addToPopupManager();
-                }
+                MyPopup popup = popup();
+                popup.addToPopupManager();
             }
 
             private MyPopup popup() {
@@ -224,11 +259,11 @@ public class MainMenuScreen extends AbstractScreen {
             }
 
         });
-        float dimen = MainDimen.horizontal_general_margin.getDimen();
         table.add(new MyWrappedLabel(new MyWrappedLabelConfigBuilder().setText(((currentGame.getCurrentQuestionIndex() + 1) + "/" + currentGame.getQuestions().size())).setFontScale(FontManager.calculateMultiplierStandardFontSize(2.7f)).setSingleLineLabel().build())).pad(dimen);
         table.add().growX();
         table.add(newGame).width(newGame.getWidth() * 1.7f).height(newGame.getHeight());
         table.add(info).pad(dimen).width(info.getWidth()).height(info.getHeight());
+
         return table;
     }
 
@@ -287,7 +322,13 @@ public class MainMenuScreen extends AbstractScreen {
     }
 
     private MyWrappedLabelConfig getAnswerInfoLabel(String text) {
-        return new MyWrappedLabelConfigBuilder().setTextColor(Color.GRAY).setFontScale(FontManager.calculateMultiplierStandardFontSize(2f)).setText(text).build();
+        return new MyWrappedLabelConfigBuilder().setTextColor(FontColor.GRAY).setFontScale(FontManager.calculateMultiplierStandardFontSize(2f)).setText(text).build();
+    }
+
+    @Override
+    public void render(float delta) {
+        super.render(delta);
+        Utils.createChangeLangPopup();
     }
 
     @Override
