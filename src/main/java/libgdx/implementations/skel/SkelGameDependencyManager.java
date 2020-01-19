@@ -34,6 +34,11 @@ public class SkelGameDependencyManager extends CampaignGameDependencyManager {
     }
 
     @Override
+    public String getExtraContentProductId() {
+        return "extraContentPerstest";
+    }
+
+    @Override
     public Class<LettersQuestionCategoryEnum> getQuestionCategoryTypeEnum() {
         return LettersQuestionCategoryEnum.class;
     }
